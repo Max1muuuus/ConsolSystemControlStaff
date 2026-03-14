@@ -80,7 +80,7 @@ void adminMenu(AdminClass& admin) {
 			std::cin >> supplier_contact;
 			GoodsClass goods(name, description, category, warranty_period, serial_number, weight, manufacturer, country_of_origin,
 				price, discount, tax_rate, rating, stock_quantity, supplier_contact);
-			admin.addGoods(goods);
+			admin.addGoods(&goods);
 		}
 		else if (choice == 2) {
 			std::string serial_number;
@@ -123,7 +123,7 @@ void adminMenu(AdminClass& admin) {
 			std::cout << "Enter guest id: ";
 			std::cin >> id;
 			GuestClass guest(username, password, name, email, lastname, address, phone_number, age, id);
-			admin.addGuest(guest);
+			admin.addGuest(&guest);
 		}
 		else if (choice == 6) {
 			std::string username;
@@ -139,7 +139,7 @@ void adminMenu(AdminClass& admin) {
 			std::cout << "Enter guest username to view: ";
 			std::cin >> username;
 			GuestClass guest(username, "", "", "", "", "", "", 0, 0);
-			admin.viewGuest(guest);
+			admin.viewGuest(&guest);
 		}
 		else if (choice == 0) {
 			std::cout << "Logging out..." << std::endl;
@@ -161,7 +161,7 @@ void guestMenu(GuestClass& guest) {
 		std::cin >> choice;
 		if (choice == 1) {
 			GoodsClass goods;
-			guest.viewGoods(goods);
+			guest.viewGoods(&goods);
 		}
 		else if (choice == 0) {
 			std::cout << "Logging out..." << std::endl;

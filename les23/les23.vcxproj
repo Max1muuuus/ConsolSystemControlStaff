@@ -136,6 +136,7 @@
     <ClInclude Include="AdminClass.h" />
     <ClInclude Include="EnterProgram.h" />
     <ClInclude Include="ExportImport.h" />
+    <ClInclude Include="ExportImportRealisation.cpp" />
     <ClInclude Include="GoodsClass.h" />
     <ClInclude Include="GuestClass.h" />
     <ClInclude Include="UserClass.h" />
